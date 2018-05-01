@@ -1,0 +1,24 @@
+﻿<configuration>
+  <configSections>
+    <!--<section name="unity" type="Microsoft.Practices.Unity.Configuration.UnityConfigurationSection, Microsoft.Practices.Unity.Configuration"/>-->
+    <section name="unity" type="Microsoft.Practices.Unity.Configuration.UnityConfigurationSection, Unity.Configuration"/>
+  </configSections>
+  <unity> 
+    <!--<sectionExtension type ="Microsoft.Practices.Unity.InterceptionExtension.Configuration.InterceptionConfigurationExtension,Microsoft.Practices.Unity.Interception.Configuration "></sectionExtension >-->
+    <sectionExtension type ="Microsoft.Practices.Unity.InterceptionExtension.Configuration.InterceptionConfigurationExtension,Unity.Interception.Configuration"></sectionExtension >
+    <containers>
+      <container name="defaultContainer">
+        <extension type= "Interception"/>
+        <register type="System.Data.Entity.DbContext, EntityFramework" mapTo="Sunny.EF.Model.MyContext, Sunny.EF.Model"/>
+        <register type="Sunny.Business.Interface.IBaseService`1,Sunny.Business.Interface" mapTo="Sunny.Business.Service.BaseService`1, Sunny.Business.Service"/>
+        <register type="Sunny.Business.Interface.IUserService,Sunny.Business.Interface" mapTo="Sunny.Business.Service.UserService, Sunny.Business.Service">
+          <interceptor type ="InterfaceInterceptor"/>
+          <policyInjection/><!--配置特性拦截-->
+
+          <!--为接口配置拦截-->
+          <!--<interceptionBehavior type="Sunny.Framework.AOP.Behavior.CachingBehavior, Sunny.Framework"/>-->         
+        </register>
+      </container>
+    </containers>
+  </unity>
+</configuration>
