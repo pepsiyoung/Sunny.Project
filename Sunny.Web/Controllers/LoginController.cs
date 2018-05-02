@@ -52,3 +52,10 @@ namespace Sunny.Web.Controllers
         }
     }
 }
+
+
+
+//打开VS中工具有个NuGet包管理器中选择程序包管理器控制台，输入：Enable-Migrations
+
+//第二步：添加Migrations，在程序包管理器控制台输入Add-Migration AddUrl，后面的AddUrl，依据自己的要求编写
+//第三步：更新数据库：在程序包管理器控制台输入 Update-Database 命令，就能看到数据库中多了要操作的表了
