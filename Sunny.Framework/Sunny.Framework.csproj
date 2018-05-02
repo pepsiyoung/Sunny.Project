@@ -73,7 +73,7 @@
     <Compile Include="AOP\Behavior\CachingBehavior.cs" />
     <Compile Include="AOP\Handler\AfterLogHandler.cs" />
     <Compile Include="AOP\Handler\LogHandler.cs" />
-    <Compile Include="Log\Logger.cs" />
+    <Compile Include="LogHelper\Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

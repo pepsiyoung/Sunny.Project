@@ -1,4 +1,4 @@
-﻿using Sunny.Framework.Log;
+﻿using Sunny.Framework.LogHelper;
 using Sunny.Web.Models;
 using System;
 using System.Collections.Generic;
