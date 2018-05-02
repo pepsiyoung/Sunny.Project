@@ -19,7 +19,7 @@ namespace Sunny.Framework.AOP.Behavior
 
         public IMethodReturn Invoke(IMethodInvocation input, GetNextInterceptionBehaviorDelegate getNext)
         {
-            //Console.WriteLine("CachingBehavior");
+            Console.WriteLine("CachingBehavior");
             return getNext().Invoke(input, getNext);
         }
     }

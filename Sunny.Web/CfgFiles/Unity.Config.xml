@@ -5,7 +5,7 @@
   </configSections>
   <unity> 
     <!--<sectionExtension type ="Microsoft.Practices.Unity.InterceptionExtension.Configuration.InterceptionConfigurationExtension,Microsoft.Practices.Unity.Interception.Configuration "></sectionExtension >-->
-    <sectionExtension type ="Microsoft.Practices.Unity.InterceptionExtension.Configuration.InterceptionConfigurationExtension,Unity.Interception.Configuration"></sectionExtension >
+    <sectionExtension type ="Microsoft.Practices.Unity.InterceptionExtension.Configuration.InterceptionConfigurationExtension,Unity.Interception.Configuration"></sectionExtension>
     <containers>
       <container name="defaultContainer">
         <extension type= "Interception"/>

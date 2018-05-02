@@ -18,7 +18,7 @@ namespace Sunny.Framework.AOP.Handler
             {
                 sb.AppendFormat("Para={0} ", para == null ? "null" : para.ToString());
             }
-            //Console.WriteLine("日志已记录，开始请求{0}", sb.ToString());
+            Console.WriteLine("日志已记录，开始请求{0}", sb.ToString());
             return getNext()(input, getNext);
         }
     }
